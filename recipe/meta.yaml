@@ -23,7 +23,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - demes >=0.1.2,<0.2
+    - demes >=0.2.0
     - matplotlib-base >=3.3.1
     - numpy
     - python >=3.6
