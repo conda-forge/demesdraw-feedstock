@@ -23,18 +23,20 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - demes >=0.2.0
+    - cvxpy
+    - demes >=0.2.1
     - matplotlib-base >=3.3.1
     - numpy
     - python >=3.6
-    - scipy
 
 test:
   imports:
     - demesdraw
   commands:
     - pip check
-    - demesdraw --help
+    - demesdraw --version
+    - demes ms -N0 1 -I 2 0 0 0.1 -es 1 1 0.99 -ej 1 3 2 -ej 100 2 1 | demesdraw tubes - /tmp/tubes.svg
+    - demes ms -N0 100 -G 0.01 -eN 100 1 | demesdraw size_history - /tmp/size_history.svg
   requires:
     - pip
 
