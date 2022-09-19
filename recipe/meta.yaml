@@ -1,5 +1,5 @@
 {% set name = "demesdraw" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1880f00e7180a6ef4fb97f80ccbe0bb1f5e38752666a767eab3923065cb668a6
+  sha256: 0388c7e6ecc9e910a731e7be74b36435d8c3aadeb84b65296a488231a5d7d70d
 
 build:
   number: 0
