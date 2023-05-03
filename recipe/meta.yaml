@@ -1,5 +1,5 @@
 {% set name = "demesdraw" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0388c7e6ecc9e910a731e7be74b36435d8c3aadeb84b65296a488231a5d7d70d
+  sha256: 9fb773fa461fdb2cabeba4c1c78e765bacf8a93e9b4fcd6ed09e1a30062e1827
 
 build:
   number: 0
@@ -23,11 +23,11 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - cvxpy
     - demes >=0.2.1
     - matplotlib-base >=3.3.1
     - numpy
     - python >=3.6
+    - scipy
 
 test:
   imports:

@@ -1,11 +1,11 @@
-About demesdraw
-===============
+About demesdraw-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/demesdraw-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/grahamgower/demesdraw
 
 Package license: ISC
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/demesdraw-feedstock/blob/main/LICENSE.txt)
 
 Summary: drawing tools for Demes demographic models
 
