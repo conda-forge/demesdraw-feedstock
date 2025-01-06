@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9fb773fa461fdb2cabeba4c1c78e765bacf8a93e9b4fcd6ed09e1a30062e1827
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - demesdraw = demesdraw.__main__:cli
@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
     - demes >=0.2.1
     - matplotlib-base >=3.3.1
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - scipy
 
 test:
@@ -39,6 +39,7 @@ test:
     - demes ms -N0 100 -G 0.01 -eN 100 1 | demesdraw size_history - /tmp/size_history.svg
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/grahamgower/demesdraw
